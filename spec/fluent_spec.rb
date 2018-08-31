@@ -5,7 +5,8 @@ describe Fluent do
     expect(Fluent::VERSION).not_to be nil
   end
 
-  it 'does something useful' do
-    expect(false).to eq(true)
+  describe Fluent do
+    it { expect(Fluent).not_to be nil }
+    it { expect(Fluent::Lexicon).not_to be nil }
   end
 end
