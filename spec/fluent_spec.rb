@@ -5,6 +5,10 @@ describe Fluent do
     expect(Fluent::VERSION).not_to be nil
   end
 
+  describe Reflex do
+    it { expect(Reflex).not_to be nil }
+  end
+
   describe Fluent do
     it { expect(Fluent).not_to be nil }
     it { expect(Fluent::Lexicon).not_to be nil }
