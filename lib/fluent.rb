@@ -1,4 +1,5 @@
 require 'active_support/concern'
+require 'reflex'
 require 'fluent/version'
 require 'fluent/lexicon'
 
