@@ -1,5 +1,5 @@
 require 'active_support/concern'
-require 'reflex'
+require 'flexcon'
 require 'fluent/version'
 require 'fluent/lexicon'
 
@@ -29,8 +29,8 @@ module Fluent
     end
   end
 
-  def respond_to?(name)
-    super(name) || self.class.dictionary.call(name).present?
+  def respond_to?(name, include_private=false)
+    super(name, include_private) || self.class.dictionary.call(name).present?
   end
 
   def method_missing(name, *args, &block)
@@ -39,7 +39,7 @@ module Fluent
     definition = self.class.dictionary.call(translated)
     
     if definition.present?
-      result = Reflex.inject({ 
+      result = Flexcon.dispatch({ 
         api: self, 
         name: name, 
         definition: definition, 

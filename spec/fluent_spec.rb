@@ -5,8 +5,8 @@ describe Fluent do
     expect(Fluent::VERSION).not_to be nil
   end
 
-  describe Reflex do
-    it { expect(Reflex).not_to be nil }
+  describe Flexcon do
+    it { expect(Flexcon).not_to be nil }
   end
 
   describe Fluent do

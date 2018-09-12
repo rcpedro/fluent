@@ -7,7 +7,7 @@ Gem::Specification.new do |spec|
   spec.name          = "fluent"
   spec.version       = Fluent::VERSION
   spec.authors       = ["Rodette Pedro"]
-  spec.email         = ["rpedro@jway.com"]
+  spec.email         = ["rodettecpedro@gmail.com"]
 
   spec.summary       = "Build Fluent APIs"
   spec.description   = "A library for building fluent APIs"
